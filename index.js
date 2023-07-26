@@ -1,8 +1,19 @@
-//ReactDOM.render(<h1>Hello, everyone!</h1>, document.getElementById("root"))
-ReactDOM.render(<ul><li>Thing 1</li><li>Thing 2</li></ul>, document.getElementById("root"))
+import React from "react"
+import ReactDOM from "react-dom"
+import Header from "./Header"
+import MainContent from "./MainContent"
+import Footer from "./Footer"
 
-const h1 = document.createElement("h1")
-h1.textContent = "This is an imperative way to program"
-h1.className = "headeer"
-h1.className = "header"
-document.getElementById("root").append(h1)
+
+function Page() {
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />
+
+        </div>
+    )
+}
+
+ReactDOM.render(<Page />, document.getElementById("root"))
